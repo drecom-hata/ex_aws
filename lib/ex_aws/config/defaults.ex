@@ -171,8 +171,8 @@ defmodule ExAws.Config.Defaults do
     end
   end
 
-  defp fetch_or(map, key, msg) do
-    Map.get(map, key) || raise msg
+  defp fetch_or(map, key, _msg) do
+    Map.get(map, key)
   end
 
   def apply_defaults(hostname, service, region, dns_suffix) do
